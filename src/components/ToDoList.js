@@ -78,17 +78,8 @@ class ToDoList extends Component {
           {this.renderAddForm()}
           {this.renderToDos()}
         </div>
-        <div className="fixed-action-btn">
-          <button
-            onClick={() => this.setState({ addFormVisible: !addFormVisible })}
-            className="btn-floating btn-large teal darken-4"
-          >
-            {addFormVisible ? (
-              <i className="large material-icons">close</i>
-            ) : (
-              <i className="large material-icons">add</i>
-            )}
-          </button>
+        <div className="waves-effect waves-light btn" onClick={() => this.setState({ addFormVisible: !addFormVisible })}>
+          {addFormVisible ? 'close' : 'add'}
         </div>
       </div>
     );
